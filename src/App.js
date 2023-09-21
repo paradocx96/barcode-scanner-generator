@@ -1,35 +1,22 @@
+import {Route, Routes} from "react-router-dom";
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import React from 'react';
 import Home from './pages/Home'
-import Bargen from './pages/BarcodeGenerator'
-import Barscan from './pages/BarcodeScanner'
+import BarcodeGenerator from "./pages/BarcodeGenerator";
+import BarcodeScanner from "./pages/BarcodeScanner";
 
-function App() {
+
+export default function App() {
     return (
         <div className="App">
             <div className="App-header">
-
-                <Router>
-                    <div>
-
-                        <Switch>
-                            <Route exact path="/">
-                                <Home/>
-                            </Route>
-                            <Route path="/barcode_generator">
-                                <Bargen/>
-                            </Route>
-                            <Route path="/barcode_scanner">
-                                <Barscan/>
-                            </Route>
-                        </Switch>
-
-                    </div>
-                </Router>
-
+                <Routes>
+                    <Route exact path="/" element={<Home/>}/>
+                    <Route exact path="/barcode_generator" element={<BarcodeGenerator/>}/>
+                    <Route exact path="/barcode_scanner" element={<BarcodeScanner/>}/>
+                    <Route path="*" element={<h1>Page Not Found</h1>}/>
+                </Routes>
             </div>
         </div>
     );
 }
-
-export default App;

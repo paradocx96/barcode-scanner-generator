@@ -1,6 +1,6 @@
 # React Barcode Scanner & Generator
 
-A simple React application to generate & scan barcode. 
+A simple React application to generate & scan barcode.
 
 - __Barcode Generator: [react-barcode](https://github.com/kciter/react-barcode)__
 

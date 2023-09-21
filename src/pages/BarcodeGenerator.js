@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 import {useBarcode} from '@createnextapp/react-barcode'
 
 function BarcodeGenerator() {
-    const [barcode, setBarcode] = useState('lintangwisesa');
+    const [barcode, setBarcode] = useState('zexeltech');
 
     const handleChange = (event) => {
         setBarcode(event.target.value ? event.target.value : '');
